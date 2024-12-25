@@ -76,6 +76,18 @@ impl SolutionFactory {
         Self { solutions }
     }
 
+    pub fn get_latest_problem_number(&self) -> u32 {
+        *self.solutions.keys().max().unwrap_or(&0)
+    }
+
+    pub fn get_latest_n_problem_numbers(&self, n: usize) -> Vec<u32> {
+        let mut numbers: Vec<_> = self.solutions.keys().copied().collect();
+        numbers.sort_by(|a, b| b.cmp(a));  // Sort in descending order
+        numbers.truncate(n);
+        numbers.sort();  // Sort in ascending order for display
+        numbers
+    }
+
     pub fn run(&self, problems: Option<Vec<u32>>) {
         match problems {
             Some(nums) => {
