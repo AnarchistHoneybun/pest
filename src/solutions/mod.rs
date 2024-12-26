@@ -47,6 +47,7 @@ impl SolutionFactory {
         register_solution!(solutions, p025::Problem025);
         register_solution!(solutions, p021::Problem021);
         register_solution!(solutions, p012::Problem012);
+        register_solution!(solutions, p026::Problem026);
         register_solution!(solutions, p013::Problem013);
         register_solution!(solutions, p005::Problem005);
         register_solution!(solutions, p006::Problem006);
@@ -110,6 +111,7 @@ pub mod p023;
 pub mod p025;
 pub mod p021;
 pub mod p012;
+pub mod p026;
 pub mod p013;
 pub mod p005;
 pub mod p006;
