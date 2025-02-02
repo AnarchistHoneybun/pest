@@ -36,13 +36,16 @@ impl SolutionFactory {
     pub fn new() -> Self {
         let mut solutions = HashMap::new();
         register_solution!(solutions, p007::Problem007);
+        register_solution!(solutions, p029::Problem029);
         register_solution!(solutions, p020::Problem020);
+        register_solution!(solutions, p027::Problem027);
         register_solution!(solutions, p022::Problem022);
         register_solution!(solutions, p009::Problem009);
         register_solution!(solutions, p016::Problem016);
         register_solution!(solutions, p011::Problem011);
         register_solution!(solutions, p018::Problem018);
         register_solution!(solutions, p004::Problem004);
+        register_solution!(solutions, p028::Problem028);
         register_solution!(solutions, p023::Problem023);
         register_solution!(solutions, p025::Problem025);
         register_solution!(solutions, p021::Problem021);
@@ -59,6 +62,7 @@ impl SolutionFactory {
         register_solution!(solutions, p015::Problem015);
         register_solution!(solutions, p003::Problem003);
         register_solution!(solutions, p019::Problem019);
+        register_solution!(solutions, p030::Problem030);
         register_solution!(solutions, p008::Problem008);
         register_solution!(solutions, p001::Problem001);
 
@@ -100,13 +104,16 @@ impl SolutionFactory {
 }
 
 pub mod p007;
+pub mod p029;
 pub mod p020;
+pub mod p027;
 pub mod p022;
 pub mod p009;
 pub mod p016;
 pub mod p011;
 pub mod p018;
 pub mod p004;
+pub mod p028;
 pub mod p023;
 pub mod p025;
 pub mod p021;
@@ -123,5 +130,6 @@ pub mod p010;
 pub mod p015;
 pub mod p003;
 pub mod p019;
+pub mod p030;
 pub mod p008;
 pub mod p001;
