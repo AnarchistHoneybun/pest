@@ -10,7 +10,9 @@ impl Problem029 {
 }
 
 impl Solution for Problem029 {
-    fn number(&self) -> u32 { 29 }
+    fn number(&self) -> u32 {
+        29
+    }
 
     fn title(&self) -> &'static str {
         "Distinct Powers"
@@ -21,7 +23,7 @@ impl Solution for Problem029 {
         for a in 2u8..=100 {
             for b in 2..=100 {
                 let term = (a as f64).powf(b as f64);
-                let bits: u64 = unsafe { std::mem::transmute(term) };
+                let bits = term.to_bits();
                 values.insert(bits);
             }
         }
