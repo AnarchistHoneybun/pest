@@ -1,5 +1,6 @@
 use std::env;
 mod solutions;
+mod utils;
 use solutions::SolutionFactory;
 
 fn main() {
@@ -11,7 +12,7 @@ fn main() {
             None
         } else if args[0] == "--recent" {
             Some(vec![factory.get_latest_problem_number()])
-        } else if args[0] == "--n" {
+        } else if args[0] == "-n" {
             if args.len() < 2 {
                 println!("Please specify the number of recent problems to run after --n");
                 return;
@@ -38,7 +39,7 @@ fn main() {
             println!("Unknown argument. Available options:");
             println!("  --all          Run all solutions");
             println!("  --recent       Run most recent solution");
-            println!("  --n <number>   Run last N solutions");
+            println!("  -n <number>   Run last N solutions");
             println!("  --problems=X,Y,Z  Run specific problems (comma-separated)");
             return;
         }
